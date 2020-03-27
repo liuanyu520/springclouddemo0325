@@ -7,16 +7,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="registerserver" />
+        <module name="configserver" />
         <module name="serviceproduct" />
         <module name="getewayserver" />
         <module name="serviceorder" />
+        <module name="configclient" />
         <module name="zuulgatewayserver" />
         <module name="serviceuser" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configfiles" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configclient" options="-parameters" />
+      <module name="configfiles" options="-parameters" />
+      <module name="configserver" options="-parameters" />
       <module name="getewayserver" options="-parameters" />
       <module name="registerserver" options="-parameters" />
       <module name="serviceorder" options="-parameters" />
